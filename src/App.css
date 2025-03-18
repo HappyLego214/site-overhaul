@@ -1,42 +1,129 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+:root {
+  --default-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
+    "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
+    "Source Han Sans CN", sans-serif;
+}
+  
+.main-container {
+  overflow: hidden;
+}
+
+.main-container,
+.main-container * {
+  box-sizing: border-box;
+}
+
+input,
+select,
+textarea,
+button {
+  outline: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+div {
+  border: 1px solid white;
+  color: white;
+}
+.main-container {
+  display: grid;
+  grid-template-rows: 80px repeat(8, calc(100vh - 80px)); /* Header + 3 full-screen sections */
+  height: calc(3 * (100vh - 80px) + 80px); /* Ensures correct total height */
+  background: #0c0c0c;
+}
+
+.frame-container {
+  height: 100vh;
+}
+
+.homepage-first-frame {
+  display: grid;
+  grid-template-rows: 80px 1fr;
+  height: 90vh;
+  width: auto;
+}
+
+.homepage-first-titles {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 200px;
+}
+
+.flex-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.technology-background {
+  position: absolute;
+  width: 226px;
+  height: 53px;
+  top: 15px;
+  left: 25px;
+  background: url(https://static.codia.ai/image/2025-03-18/e62b5175-3bf4-413c-b569-da3a8fa2ff44.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 2;
+}
+
+.regroup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Roboto, var(--default-font-family);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 28px;
+  gap: 50px;
+}
+
+.regroup .home {
+  color: #34b3f1;
+}
+
+.imagine-journey-empower {
+  color: #ffffff;
+  font-family: Roboto, var(--default-font-family);
+  font-size: 40px;
+  font-weight: 300;
+  line-height: 56px;
   text-align: center;
+  white-space: nowrap;
+  z-index: 3;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.make-it-possible {
+  font-family: Roboto, var(--default-font-family);
+  font-size: 80px;
+  height: 100px;
+  font-weight: 500;
+  line-height: 112.5px;
+  text-align: left;
+  text-overflow: initial;
+  white-space: nowrap;
+  z-index: 1;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.possible {
+  color: #34b3f1;
 }
 
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+.mesh-gradient {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: url(https://static.codia.ai/image/2025-03-18/5a1b3bf1-0461-4c6d-bbec-56ad05a20395.png)
+    no-repeat center;
+  background-size: cover;
+  background-position: center top; /* Adjust this to position the gradient */
 }
