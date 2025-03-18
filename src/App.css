@@ -4,6 +4,12 @@
     "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
     "Source Han Sans CN", sans-serif;
 }
+
+h1,h2,h3,h4.h5,h6,p {
+  font-family: Roboto, var(--default-font-family);
+  margin: 0;
+  padding: 0;
+}
   
 .main-container {
   overflow: hidden;
@@ -32,8 +38,8 @@ div {
 }
 .main-container {
   display: grid;
-  grid-template-rows: 80px repeat(8, calc(100vh - 80px)); /* Header + 3 full-screen sections */
-  height: calc(3 * (100vh - 80px) + 80px); /* Ensures correct total height */
+  grid-template-rows: repeat(8, calc(100vh)); /* Header + 3 full-screen sections */
+  height: calc(5 * (100vh)); /* Ensures correct total height */
   background: #0c0c0c;
 }
 
@@ -41,19 +47,19 @@ div {
   height: 100vh;
 }
 
-.homepage-first-frame {
+.container-ffh {
   display: grid;
   grid-template-rows: 80px 1fr;
   height: 90vh;
   width: auto;
 }
 
-.homepage-first-titles {
+.titles-ffh {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 200px;
+  margin-bottom: 40px;
 }
 
 .flex-row {
@@ -116,7 +122,7 @@ div {
   color: #34b3f1;
 }
 
-.mesh-gradient {
+.mesh-gradient-ffh {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -126,4 +132,56 @@ div {
     no-repeat center;
   background-size: cover;
   background-position: center top; /* Adjust this to position the gradient */
+  z-index: 0;
+}
+
+.mesh-gradient-sfh {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 100;
+  left: 0;
+  background: url('./assets/sfh-grad.png')
+    no-repeat center;
+  background-size: cover;
+  background-position: center top; /* Adjust this to position the gradient */
+  z-index: 0;
+}
+
+.container-sfh {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+}
+
+.first-col-sfh {
+  display: grid;
+  grid-template-rows: 1.5fr 1fr;
+}
+
+.text-container-sfh {
+  display: flex;
+  padding-left: 100px;
+  padding-top: 125px;
+  font-size: 50px;
+  color: #ffffff;
+  letter-spacing: 1px;
+  font-weight: 50px;
+  align-items: center;
+  z-index: 1;
+}
+
+.text-container-sfh p {
+  font-size: 17px;
+  font-weight: lighter;
+}
+
+.text-wrapper-sfh {
+  display: flex;
+  flex-direction: column;
+  width: 670px;
+  gap: 15px;
+}
+
+.second-col-sfh {
+
 }
