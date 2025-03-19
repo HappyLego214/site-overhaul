@@ -1,4 +1,4 @@
-const navbar = () => {
+const Navbar = () => {
   return (
     <div className="flex-row">
         <div className="technology-background"></div>
@@ -13,4 +13,4 @@ const navbar = () => {
   )
 }
 
-export default navbar
+export default Navbar

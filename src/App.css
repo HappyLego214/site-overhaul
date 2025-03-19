@@ -5,7 +5,7 @@
     "Source Han Sans CN", sans-serif;
 }
 
-h1,h2,h3,h4.h5,h6,p {
+h1,h2,h3,h4,h5,h6,p {
   font-family: Roboto, var(--default-font-family);
   margin: 0;
   padding: 0;
@@ -13,6 +13,7 @@ h1,h2,h3,h4.h5,h6,p {
   
 .main-container {
   overflow: hidden;
+  min-width: 1000px;
 }
 
 .main-container,
@@ -33,23 +34,19 @@ body {
 }
 
 div {
-  border: 1px solid white;
+  border: 0px solid white;
   color: white;
 }
 .main-container {
   display: grid;
-  grid-template-rows: repeat(8, calc(100vh)); /* Header + 3 full-screen sections */
+  grid-template-rows: 80px 90vh repeat(8, calc(100vh)); /* Header + 3 full-screen sections */
   height: calc(5 * (100vh)); /* Ensures correct total height */
   background: #0c0c0c;
 }
 
-.frame-container {
-  height: 100vh;
-}
-
 .container-ffh {
   display: grid;
-  grid-template-rows: 80px 1fr;
+  grid-template-rows: 1fr;
   height: 90vh;
   width: auto;
 }
@@ -142,7 +139,7 @@ div {
   top: 100;
   left: 0;
   background: url('./assets/sfh-grad.png')
-    no-repeat center;
+    no-repeat center; 
   background-size: cover;
   background-position: center top; /* Adjust this to position the gradient */
   z-index: 0;
@@ -155,19 +152,24 @@ div {
 
 .first-col-sfh {
   display: grid;
-  grid-template-rows: 1.5fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  z-index: 1;
 }
 
 .text-container-sfh {
   display: flex;
   padding-left: 100px;
-  padding-top: 125px;
   font-size: 50px;
+  margin-top: 200px;
   color: #ffffff;
   letter-spacing: 1px;
   font-weight: 50px;
   align-items: center;
-  z-index: 1;
+  }
+
+.text-container-sfh h4 {
+  font-size: 60px;
+  font-weight: 500;
 }
 
 .text-container-sfh p {
@@ -182,6 +184,47 @@ div {
   gap: 15px;
 }
 
-.second-col-sfh {
+.logo-container-sfh {
+  display: grid;
+  grid-template-columns: repeat(3, 220px);
+  grid-template-rows: repeat(2, 120px);
+  margin: 50px;
+  padding-left: 50px;
+}
 
+.logo-sfh {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.logo-sfh img {
+  display: flex;
+  height: auto;
+  width: 80%; 
+}
+
+.second-col-sfh {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.award-sfh {
+  margin-top: 100px;
+  display: flex;
+}
+
+.ms-badge {
+  height: 750px;  
+  width: 520px;
+}
+
+.ms-partner {
+  position: relative;
+  right: 625px;
+  top: 500px;
+  height: 250px;
+  width: 250px;
 }
