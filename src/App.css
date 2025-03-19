@@ -5,6 +5,11 @@
     "Source Han Sans CN", sans-serif;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 h1,h2,h3,h4,h5,h6,p {
   font-family: Roboto, var(--default-font-family);
   margin: 0;
@@ -44,14 +49,14 @@ div {
   background: #0c0c0c;
 }
 
-.container-ffh {
+.container-firstfh {
   display: grid;
   grid-template-rows: 1fr;
   height: 90vh;
   width: auto;
 }
 
-.titles-ffh {
+.titles-firstfh {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -92,6 +97,11 @@ div {
   color: #34b3f1;
 }
 
+.regroup span {
+  color: white;
+  text-decoration: none;
+}
+
 .imagine-journey-empower {
   color: #ffffff;
   font-family: Roboto, var(--default-font-family);
@@ -119,7 +129,7 @@ div {
   color: #34b3f1;
 }
 
-.mesh-gradient-ffh {
+.mesh-gradient-firstfh {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -132,31 +142,45 @@ div {
   z-index: 0;
 }
 
-.mesh-gradient-sfh {
+.mesh-gradient-secondfh {
   position: absolute;
   width: 100%;
   height: 100%;
   top: 100;
   left: 0;
-  background: url('./assets/sfh-grad.png')
+  background: url('./assets/secondfh/secondfh-grad.png')
     no-repeat center; 
   background-size: cover;
   background-position: center top; /* Adjust this to position the gradient */
   z-index: 0;
 }
 
-.container-sfh {
+.mesh-gradient-thirdfh {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 100;
+  left: 0;
+  background: url('./assets/secondfh/thirdfh-grad.png')
+    no-repeat center; 
+  background-size: cover;
+  background-position: center top; /* Adjust this to position the gradient */
+  z-index: 0;
+}
+
+
+.container-secondfh {
   display: grid;
   grid-template-columns: 1.3fr 1fr;
 }
 
-.first-col-sfh {
+.first-col-secondfh {
   display: grid;
   grid-template-rows: 1fr 1fr;
   z-index: 1;
 }
 
-.text-container-sfh {
+.text-container-secondfh {
   display: flex;
   padding-left: 100px;
   font-size: 50px;
@@ -167,24 +191,24 @@ div {
   align-items: center;
   }
 
-.text-container-sfh h4 {
+.text-container-secondfh h4 {
   font-size: 60px;
   font-weight: 500;
 }
 
-.text-container-sfh p {
+.text-container-secondfh p {
   font-size: 17px;
   font-weight: lighter;
 }
 
-.text-wrapper-sfh {
+.text-wrapper-secondfh {
   display: flex;
   flex-direction: column;
   width: 670px;
   gap: 15px;
 }
 
-.logo-container-sfh {
+.logo-container-secondfh {
   display: grid;
   grid-template-columns: repeat(3, 220px);
   grid-template-rows: repeat(2, 120px);
@@ -192,27 +216,28 @@ div {
   padding-left: 50px;
 }
 
-.logo-sfh {
+.logo-secondfh {
   display: flex;
   justify-content: start;
   align-items: center;
 }
 
-.logo-sfh img {
+.logo-secondfh img {
   display: flex;
   height: auto;
   width: 80%; 
 }
 
-.second-col-sfh {
+.second-col-secondfh {
   display: grid;
   justify-content: center;
   align-items: center;
   z-index: 2;
 }
 
-.award-sfh {
+.award-secondfh {
   margin-top: 100px;
+  margin-left: 50px;
   display: flex;
 }
 
@@ -224,7 +249,7 @@ div {
 .ms-partner {
   position: relative;
   right: 625px;
-  top: 500px;
+  top: 455px;
   height: 250px;
   width: 250px;
 }
