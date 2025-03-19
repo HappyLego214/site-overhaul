@@ -2,7 +2,7 @@
   --default-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
     "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
-    "Source Han Sans CN", sans-serif;
+    "Source Han Sans CN", sa  ns-serif;
 }
 
 a {
@@ -10,79 +10,89 @@ a {
   color: inherit;
 }
 
-h1,h2,h3,h4,h5,h6,p {
+div {
+  border: 1px solid white;
+}
+
+h1, h2, h3, h4, h5, h6, p {
   font-family: Roboto, var(--default-font-family);
   margin: 0;
   padding: 0;
-}
-  
-.main-container {
-  overflow: hidden;
-  min-width: 1000px;
-}
-
-.main-container,
-.main-container * {
-  box-sizing: border-box;
-}
-
-input,
-select,
-textarea,
-button {
-  outline: 0;
 }
 
 body {
   margin: 0;
   padding: 0;
-}
-
-div {
-  border: 1px solid white;
+  font-family: var(--default-font-family);
+  background: #0c0c0c;
   color: white;
 }
+
 .main-container {
   display: grid;
-  grid-template-rows: 80px 90vh repeat(8, calc(100vh)); /* Header + 3 full-screen sections */
-  height: calc(5 * (100vh)); /* Ensures correct total height */
+  grid-template-rows: 90px 90vh repeat(8, 100vh); /* Navbar + Content */
   background: #0c0c0c;
+  min-width: fit-content;
 }
 
-.flex-row {
+.navbar {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 100%;
 }
 
-.technology-background {
-  position: absolute;
-  width: 226px;
-  height: 53px;
-  top: 15px;
-  left: 25px;
-  background: url(https://static.codia.ai/image/2025-03-18/e62b5175-3bf4-413c-b569-da3a8fa2ff44.png)
-    no-repeat center;
-  background-size: cover;
-  z-index: 2;
+.navbar_container {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  width: 100%;
+  gap: 25px;
 }
 
-.regroup {
+.navbar_container img {
+  height: 75px;
+  margin-left: 25px ;
+  width: auto;
+}
+
+.navbar_links {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: Roboto, var(--default-font-family);
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 28px;
+  padding-right: 250px;
   gap: 50px;
 }
 
-.regroup .home {
-  color: #34b3f1;
+.home {
+  color: #3fb3f1;
 }
 
-.regroup span {
-  color: white;
-  text-decoration: none;
+.navbar_hamburger {
+  display: none;
+}
+
+.navbar img {
+  height: 55px;
+  width: auto;
+}
+
+.homepage_first_frame_container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-image: url('./assets/homepage/firstfh-grad.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 768px) {
+
+  .navbar_hamburger {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 50px;
+  }
+
+  .navbar_links {
+    display: none;
+  }
 }
