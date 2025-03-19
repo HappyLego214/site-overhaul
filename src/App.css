@@ -39,7 +39,7 @@ body {
 }
 
 div {
-  border: 0px solid white;
+  border: 1px solid white;
   color: white;
 }
 .main-container {
@@ -236,12 +236,13 @@ div {
 }
 
 .award-secondfh {
-  margin-top: 100px;
   margin-left: 50px;
   display: flex;
 }
 
 .ms-badge {
+  position: relative;
+  top: 100px;
   height: 750px;  
   width: 520px;
 }
@@ -249,7 +250,12 @@ div {
 .ms-partner {
   position: relative;
   right: 625px;
-  top: 455px;
+  top: 555px;
   height: 250px;
   width: 250px;
+}
+
+.container-thirdfh {
+  display: grid;
+
 }

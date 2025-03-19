@@ -14,7 +14,7 @@ const Homepage: React.FC = () => {
         <HM_secondFrame />
       </PageFrame>
       <PageFrame>
-        <HM_thirdframe />
+        {/* Add other content here */}
       </PageFrame>
       <PageFrame>
         {/* Add other content here */}
