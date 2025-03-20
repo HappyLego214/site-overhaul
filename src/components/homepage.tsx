@@ -37,6 +37,15 @@ export default Homepage;
 export const HM_firstFrame = () => {
   return (
     <div className="homepage_first_frame_container">
+      <div className="text_homepage_first_frame_container">
+        <div className="tagline_homepage_first_frame">
+          <h3>Imagine. Journey. Empower.</h3>
+        </div>
+        <div className="title_homepage_first_frame">
+          <h1>Let's make it</h1>
+          <h1>possible.</h1>
+        </div>
+      </div>
     </div>
   )
 }
