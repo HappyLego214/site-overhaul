@@ -11,7 +11,7 @@ const Homepage: React.FC = () => {
         <HM_secondFrame />
       </PageFrame>
       <PageFrame>
-        {/* Add other content here */}
+        <HM_thirdframe/>
       </PageFrame>
       <PageFrame>
         {/* Add other content here */}
@@ -77,6 +77,22 @@ export const HM_secondFrame = () => {
 
 export const HM_thirdframe = () => {
   return (
-    <div></div>
+    <div className="homepage_third_frame_container">
+      <div className="one_homepage_third_frame_container">
+        <div className="text_homepage_third_frame_container">
+          <h1>Driving Change with Kation</h1>
+          <p>
+          As a Microsoft Tier 1 Partner, we go beyond providing licensing services—we empower organizations with tailored solutions built on Dynamics 365 and Microsoft 365. With deep expertise and a passion for innovation, we help businesses harness the full potential of technology to streamline operations, enhance efficiency, and adapt to an ever-evolving digital landscape. Our goal is not just to implement solutions, but to create lasting impact—unlocking new opportunities, driving transformation, and equipping teams with the tools they need to thrive today and in the future.
+          </p>
+        </div>
+        <div className="products_third_frame_container">
+        <img src="./src/assets/homepage/Tier.png"></ img>
+          <img src="./src/assets/homepage/D365.png"></img>
+          <img src="./src/assets/homepage/M365.png"></img>
+   
+        </div>
+      </div>
+      <div className="two_homepage_third_frame_container"></div>
+    </div>
   )
 }
