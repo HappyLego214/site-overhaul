@@ -5,8 +5,7 @@ const Homepage: React.FC = () => {
   return (
     <>
       <PageFrame>
-        <HM_firstFrame>
-        </HM_firstFrame>
+        <HM_firstFrame/>
       </PageFrame>
       <PageFrame>
         <HM_secondFrame />
@@ -52,7 +51,27 @@ export const HM_firstFrame = () => {
 
 export const HM_secondFrame = () => {
     return (
-      <div></div>
+      <div className="homepage_second_frame_container">
+        <div className="one_homepage_second_frame_container">
+          <div className="text_homepage_second_frame_container">
+            <h1>Grow with us.</h1>
+            <p>As a transformation and consulting company, Kation, with locations in the Philippines and Indonesia that serves clients in the Asia Pacific region, connects technology with people and how they work. We drive business success using our human-centered design, tools, and systems on platforms that best support business growth and direction.</p>
+          </div>
+          <div className="brands_homepage_second_frame_container">
+            <img src="./src/assets/homepage/royal.png" className="brand_img_homepage_second_frame"></img>
+            <img src="./src/assets/homepage/coca-cola.png" className="brand_img_homepage_second_frame"></img>
+            <img src="./src/assets/homepage/citadel.png" className="brand_img_homepage_second_frame"></img>
+            <img src="./src/assets/homepage/rustans.png" className="brand_img_homepage_second_frame"></img>
+            <img src="./src/assets/homepage/messy-bessy.png" className="brand_img_homepage_second_frame"></img>
+            <img src="./src/assets/homepage/beyond-innovations.png"className="brand_img_homepage_second_frame"></img>
+          </div>
+        </div>
+        <div className="two_homepage_second_frame_container">
+          <div className="badge_homepage_second_frame">
+            <img src="./src/assets/homepage/badge-partner.png"></img>
+          </div>
+        </div>
+      </div>
     )
   }
 
